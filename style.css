@@ -1,0 +1,331 @@
+
+html {
+    font-family: 'Montserrat',sans-serif;
+}
+
+
+body {
+    margin: 0;
+    background-color: #222;
+}
+
+/* .back-div {
+    float: left;
+    width: 25%;
+
+} */
+
+/* .back-img {
+    width: 16%;
+    border-radius: 150px 150px ;
+    margin-left: 150px;
+    transition: all 3s ease;
+    opacity: 0;
+    filter: blur(1px);
+    position: relative;
+    bottom: 400px;
+} */
+
+
+/* .back-img:hover {
+    opacity: 1;
+} */
+
+header {
+    background-color: #e79435;
+    color: snow;
+    width: calc(100% - 150px);
+    text-align: center;
+    padding: 75px;
+}
+
+header h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+
+header:hover {
+    transition: 0.5s ease;
+    background-image: url(https://st1.uvnimg.com/32/9f/943699484b259a20e8bd9b456a4a/giphy.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #111;
+    font-size: large;
+    /* padding: 5rem; */
+    color: transparent;
+    border-radius: 1.5rem;
+}
+
+nav { /*esta configuracion me pega la pestaña al banner de la pagina*/
+    margin: -1rem 0 0 0;
+}
+
+nav li{
+    list-style: none;
+    float: left;
+    margin: 0px 2px;
+    padding: .5rem .3rem;
+    font-weight: bold;
+    border-radius: 0 0 .5rem .5rem;
+    color: #fff;
+    background-color: #e79435;
+    cursor: pointer;
+    /* border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem; */
+}
+
+nav li:hover {
+    transition: all 0.3s ease;
+    box-shadow: 0 .5rem .5rem .2rem #fff5;
+    background: linear-gradient(180deg,
+    #e79435 0%,
+    #fff 100%);
+    color: #444;
+}
+
+nav li:active {
+    transition: all 0s ease  ;
+    color: teal;
+    box-shadow: 0 .5rem .5rem .2rem #111;
+    background: linear-gradient(180deg,
+    #e79435 0%,
+    #222 100%);
+}
+
+.blog {
+    float: right;
+    position: absolute;
+    left: 80%;
+    margin: -1rem 0 0 0;
+    cursor: pointer;
+}
+
+div li{
+    list-style: none;
+    width: 85px;
+    padding: 8px 2px;
+    color: #fff;
+    background-color: #e79435;
+    /* border-bottom-left-radius: 16px; */
+    border-bottom-right-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+div li:hover {
+    transition: all 0.1s ease;
+    box-shadow: 0 .2rem .5rem .2rem #fff9;
+    background: linear-gradient(180deg,
+    #e79435 0%,
+    #fff 100%);
+    color: #222;
+}
+
+div li:active {
+    transition: all 0s ease  ;
+    color: teal;
+    box-shadow: 0 .2rem .5rem .2rem #111;
+    background: linear-gradient(180deg,
+    #e79435 0%,
+    #222 100%);
+}
+/* ----------------------------------------------------------- */
+#contenedor {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    margin-top: 1.5rem;
+}
+
+.tamaño-auto {
+    opacity: 0;
+}
+
+section {
+    float: left;
+    width: 60%;
+    background-color: #eee;
+    padding: 5rem 0;
+}
+
+article {
+    width: 60%;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    margin: 1rem auto;
+    padding: 0.25rem;
+}
+
+article:hover{
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+article img{
+    width: calc(100% - 1rem);
+    padding: 0.5rem;
+    border-radius: .75rem;
+}
+
+article h2 {
+    text-align: center;
+}
+
+
+
+article h2, article p {
+    margin: 1rem;
+}
+
+article p {
+    font-family: 'Fuzzy Bubbles';
+    padding: .5rem 1rem ;
+}
+
+span {
+    color: teal;
+    font-family: 'Fuzzy Bubbles';
+}
+/*------------------------------------------------------------ */
+
+ aside {
+    background-size: cover ;
+    background-color: olive;
+    margin: 1.5rem 1rem ;
+    float: left;
+    padding: .5rem .7rem;
+    width: 16%;
+    text-align: center;
+    font-weight: bold;
+    border:solid .5rem #2226;
+    transition: box-shadow .5s ease;
+}
+aside:hover {
+    box-shadow: 0 0 0.4rem #eee;
+    cursor: pointer;
+}
+
+aside img {
+    width: 100%;
+}
+/* ----------------------------------------------------------- */
+[data-content] {
+    display: none;
+}
+
+.active[data-content] {
+    display: block;
+}
+
+.clearfix {/* Hay que provar para que sirve esto.  */
+    clear: both;
+}
+/* ----------------------------------------------------------- */
+
+ .reproductor {
+    position: sticky; /*utiliza el tamanio que le puse a la id ¨contenedor¨ que se delimita con los P con clase .tamaño-auto */
+    float: left;
+    top: 400px; /* me define desde donde se empieza a mover */
+    width: calc(20% - 80px);
+    margin: 20px;
+    padding: 20px;
+    background-color: #444;/*tengo que sacar esto*/
+    border-radius: .5rem;
+}
+
+.reproductor :hover {
+    transition: all 0.3s ease;
+    box-shadow: 0 0 0.4rem #eee;
+    cursor: pointer;
+}
+
+.reproductor audio {
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.reproductor audio:hover {
+        opacity: 0.9;
+}
+
+#jake {
+    float: left;
+    width: calc(100% - 24px);
+    border: 12px groove saddlebrown;
+    opacity: 1;
+} 
+
+footer {
+    width: calc(100% - 6rem);
+    background-color: #111;
+    padding: 3rem;
+    color: #fff;
+}
+
+footer div {
+    float: right;
+}
+
+footer p {
+    margin: 0;
+}
+
+.comienzo {
+    float: right;
+    position: sticky;
+    top: 92%;
+    border: solid #4444;
+    border-radius: 7%;
+    padding: 4px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #222;
+}
+
+.comienzo a {
+    text-decoration: none;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.comienzo a:hover {
+    color: #e79435;
+}
+
+.anchor { /*cambio el vinculo de la etiqueta anchor para que no presente el caracteristico subrayado y sus consecuentes colores de link sin abrir y abierto*/
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.anchor:hover {
+    color: cornflowerblue;
+}
+.center {
+    position: relative;
+    top: 80px;
+    width: 40%;
+    /* margin: 0 auto; */
+    /* esta configuracion de margin 0 auto es lo que centra el section en la pagina, necesita una configuracion de Width establecida.  */
+}
+
+button {
+    background-color: transparent;
+    font-weight: bold;
+    color: #444;
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    border: 2px solid #eee;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all 1s ease;
+    box-shadow: .5rem .5rem 1rem #ccc,-.5rem -.5rem 1rem #fff
+}
+button:hover {
+    box-shadow: .5rem .5rem 1rem #fff,-.5rem -.5rem 1rem #ccc;
+}
+button:active {
+    box-shadow: inset .2rem .2rem 1rem #ccc, inset -.2rem -.2rem 1rem #fff
+}
